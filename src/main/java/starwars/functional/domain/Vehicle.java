@@ -179,4 +179,30 @@ public class Vehicle {
         this.vehicleClass = vehicleClass;
     }
 
+
+
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "id=" + id +
+                ", cargoCapacity='" + cargoCapacity + '\'' +
+                ", consumables='" + consumables + '\'' +
+                ", costInCredits='" + costInCredits + '\'' +
+                ", created=" + created +
+                ", crew='" + crew + '\'' +
+                ", edited=" + edited +
+                ", length='" + length + '\'' +
+                ", manufacturer='" + manufacturer + '\'' +
+                ", maxAtmospheringSpeed='" + maxAtmospheringSpeed + '\'' +
+                ", model='" + model + '\'' +
+                ", name='" + name + '\'' +
+                ", passengers='" + passengers + '\'' +
+                ", pilots=" + pilots +
+                ", films=" + films +
+                ", url='" + url + '\'' +
+                ", vehicleClass='" + vehicleClass + '\'' +
+                '}';
+    }
+
+
 }

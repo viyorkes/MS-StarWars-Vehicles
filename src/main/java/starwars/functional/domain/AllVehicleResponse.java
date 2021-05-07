@@ -6,6 +6,7 @@ import java.util.List;
 
 @JsonAutoDetect
 public class AllVehicleResponse {
+
     private Integer count;
     private String next;
     private String previous;
@@ -42,4 +43,18 @@ public class AllVehicleResponse {
     public void setResults(List<VehicleResponse> results) {
         this.results = results;
     }
+
+
+
+    @Override
+    public String toString() {
+        return "AllVehicleResponse{" +
+                "count=" + count +
+                ", next='" + next + '\'' +
+                ", previous='" + previous + '\'' +
+                ", results=" + results +
+                '}';
+    }
+
+
 }

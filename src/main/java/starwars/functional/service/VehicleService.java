@@ -2,9 +2,10 @@ package starwars.functional.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 import starwars.functional.client.SWWebClient;
 import starwars.functional.domain.AllVehicleResponse;
+
 
 
 @Service
@@ -18,11 +19,8 @@ private final SWWebClient swWebClient;
         this.swWebClient = swWebClient;
     }
 
-
-    public Flux<AllVehicleResponse> getAllVehicles(){
+    public Mono<AllVehicleResponse>  getAllVehicles(){
         return this.swWebClient.getAllVehiclesUsingRetrieve();
     }
-
-
 
 }
