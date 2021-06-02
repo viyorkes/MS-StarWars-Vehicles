@@ -20,6 +20,7 @@ public class AllVehicleResponse {
         this.count = count;
     }
 
+
     public String getNext() {
         return next;
     }
@@ -37,7 +38,7 @@ public class AllVehicleResponse {
     }
 
     public List<VehicleResponse> getResults() {
-        return results;
+        return this.results;
     }
 
     public void setResults(List<VehicleResponse> results) {

@@ -1,17 +1,23 @@
 package starwars.functional.domain;
 
+
+
 import com.fasterxml.jackson.annotation.JsonProperty;
-import javax.persistence.ElementCollection;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.time.LocalDateTime;
 import java.util.List;
 
-@Entity
+@Document
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Vehicle {
     @Id
-    @GeneratedValue
     private
     Long id;
     @JsonProperty("cargo_capacity")
@@ -32,177 +38,12 @@ public class Vehicle {
     private String model;
     private String name;
     private String passengers;
-    @ElementCollection
     private
     List<String> pilots;
-    @ElementCollection
     private
     List<String> films;
     private String url;
     @JsonProperty("vehicle_class")
     private
     String vehicleClass;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getCargoCapacity() {
-        return cargoCapacity;
-    }
-
-    public void setCargoCapacity(String cargoCapacity) {
-        this.cargoCapacity = cargoCapacity;
-    }
-
-    public String getConsumables() {
-        return consumables;
-    }
-
-    public void setConsumables(String consumables) {
-        this.consumables = consumables;
-    }
-
-    public String getCostInCredits() {
-        return costInCredits;
-    }
-
-    public void setCostInCredits(String costInCredits) {
-        this.costInCredits = costInCredits;
-    }
-
-    public LocalDateTime getCreated() {
-        return created;
-    }
-
-    public void setCreated(LocalDateTime created) {
-        this.created = created;
-    }
-
-    public String getCrew() {
-        return crew;
-    }
-
-    public void setCrew(String crew) {
-        this.crew = crew;
-    }
-
-    public LocalDateTime getEdited() {
-        return edited;
-    }
-
-    public void setEdited(LocalDateTime edited) {
-        this.edited = edited;
-    }
-
-    public String getLength() {
-        return length;
-    }
-
-    public void setLength(String length) {
-        this.length = length;
-    }
-
-    public String getManufacturer() {
-        return manufacturer;
-    }
-
-    public void setManufacturer(String manufacturer) {
-        this.manufacturer = manufacturer;
-    }
-
-    public String getMaxAtmospheringSpeed() {
-        return maxAtmospheringSpeed;
-    }
-
-    public void setMaxAtmospheringSpeed(String maxAtmospheringSpeed) {
-        this.maxAtmospheringSpeed = maxAtmospheringSpeed;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPassengers() {
-        return passengers;
-    }
-
-    public void setPassengers(String passengers) {
-        this.passengers = passengers;
-    }
-
-    public List<String> getPilots() {
-        return pilots;
-    }
-
-    public void setPilots(List<String> pilots) {
-        this.pilots = pilots;
-    }
-
-    public List<String> getFilms() {
-        return films;
-    }
-
-    public void setFilms(List<String> films) {
-        this.films = films;
-    }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    public String getVehicleClass() {
-        return vehicleClass;
-    }
-
-    public void setVehicleClass(String vehicleClass) {
-        this.vehicleClass = vehicleClass;
-    }
-
-
-
-    @Override
-    public String toString() {
-        return "Vehicle{" +
-                "id=" + id +
-                ", cargoCapacity='" + cargoCapacity + '\'' +
-                ", consumables='" + consumables + '\'' +
-                ", costInCredits='" + costInCredits + '\'' +
-                ", created=" + created +
-                ", crew='" + crew + '\'' +
-                ", edited=" + edited +
-                ", length='" + length + '\'' +
-                ", manufacturer='" + manufacturer + '\'' +
-                ", maxAtmospheringSpeed='" + maxAtmospheringSpeed + '\'' +
-                ", model='" + model + '\'' +
-                ", name='" + name + '\'' +
-                ", passengers='" + passengers + '\'' +
-                ", pilots=" + pilots +
-                ", films=" + films +
-                ", url='" + url + '\'' +
-                ", vehicleClass='" + vehicleClass + '\'' +
-                '}';
-    }
-
-
-}
+}   
