@@ -22,14 +22,6 @@ public class SWWebClient {
 
         }
 
-    public Mono<AllVehicleResponse> getAllVehiclesNames() {
-        return webClient
-                .get()
-                .uri("vehicles/")
-                .retrieve()
-                .bodyToMono(AllVehicleResponse.class);
-
-    }
 
     }
 
